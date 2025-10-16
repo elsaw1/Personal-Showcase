@@ -1,4 +1,7 @@
-# 🌐 Website Profil Kelompok “Personal Showcase”
+# 🌐 Personal Showcase
+
+✨ **Sistem yang Dirancang:**  
+Website Profil Kelompok “Personal Showcase”
 
 ---
 
@@ -48,9 +51,7 @@ Website ini ditujukan untuk:
 
 ---
 
-## 📸 Cuplikan Tampilan Website *(Opsional)*
-
-> Tambahkan tangkapan layar halaman utama atau profil di sini agar pengunjung langsung melihat hasil akhirnya.
+## 📸 Cuplikan Tampilan Website 
 ![Tampilan Website](assets/Tampilan%20Keseluruhan%20Website%20Personal%20Showcase.png)
 
 ---
