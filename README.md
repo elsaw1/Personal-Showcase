@@ -60,6 +60,4 @@ Website ini ditujukan untuk:
 ---
 
 ## 🚀 Cara Menjalankan
-1. Clone atau download repository ini ke komputer kamu.
-2. Buka file `index.html` dengan browser favoritmu (Chrome, Firefox, Edge, dll).
-3. Website akan langsung tampil dengan semua style dan interaksi, karena CSS dan JavaScript sudah ada di dalam file.
+Akses website di link berikut https://elsaw1.github.io/Personal-Showcase/
