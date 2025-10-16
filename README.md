@@ -63,8 +63,3 @@ Website ini ditujukan untuk:
 1. Clone atau download repository ini ke komputer kamu.
 2. Buka file `index.html` dengan browser favoritmu (Chrome, Firefox, Edge, dll).
 3. Website akan langsung tampil dengan semua style dan interaksi, karena CSS dan JavaScript sudah ada di dalam file.
-
-Website ini juga bisa diakses secara online via [GitHub Pages](https://elsaw1.github.io/personal-showcase1/).
-1. Clone repository ini  
-   ```bash
-   git clone https://github.com/username/repo-name.git
