@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Fitrya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a class="nav-logo">Fitrya Chalifatus Portofolio</a>
+            
+            <input type="checkbox" id="menu-toggle-input">
+            <label for="menu-toggle-input" class="menu-toggle-label">
+                <span class="hamburger-icon"></span>
+            </label>
+            
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="contact.html">Hubungi saya</a>
+                <button id="dark-mode-toggle" class="dark-mode-btn">Mode Gelap</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about-content">
+            <h1>Tentang Saya</h1>
+            <div class="about-content">
+                <div>
+                    <div class="about-avatar">
+                        <img 
+                            src="cam.jpg" 
+                            alt="Foto Fitrya"
+                            class="profile-photo" id="profile-photo">
+                    </div>
+                    <p style="text-align: center; margin-top: 0.5rem; color: var(--muted-text);">IT Enthusiast</p>
+                    <div style="text-align: center; margin-top: 1rem;">
+                        <button id="toggle-photo" class="form-btn" style="width: auto; padding: 0.5rem 1rem;">
+                            Sembunyikan Foto
+                        </button>
+                    </div>
+                </div>
+
+                <div class="about-description">
+                    <h2>Latar Belakang</h2>
+                    <p>
+                        Saya adalah seorang mahasiswa semester 3 program studi Manajemen Informatika Universitas Negeri Surabaya.
+                    </p>
+                    <p>
+                        Saya memiliki minat yang tinggi di bidang IT, khususnya dalam IT Network System Administration. 
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="tag">#ITNSA</span>
+                        <span class="tag">#SysAdmin</span>
+                        <span class="tag">#Python</span>
+                        <span class="tag">#mysql</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.textContent = 'Mode Terang';
+            }
+            
+            darkModeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                    darkModeToggle.textContent = 'Mode Terang';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    darkModeToggle.textContent = 'Mode Gelap';
+                }
+            });
+            
+            const togglePhotoBtn = document.getElementById('toggle-photo');
+            const profilePhoto = document.getElementById('profile-photo');
+            
+            togglePhotoBtn.addEventListener('click', function() {
+                if (profilePhoto.style.display === 'none') {
+                    profilePhoto.style.display = 'block';
+                    togglePhotoBtn.textContent = 'Sembunyikan Foto';
+                } else {
+                    profilePhoto.style.display = 'none';
+                    togglePhotoBtn.textContent = 'Tampilkan Foto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

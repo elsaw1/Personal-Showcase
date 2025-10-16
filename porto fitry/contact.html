@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya - Fitrya</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a class="nav-logo">Fitrya Chalifatus Portofolio</a>
+            
+            <input type="checkbox" id="menu-toggle-input">
+            <label for="menu-toggle-input" class="menu-toggle-label">
+                <span class="hamburger-icon"></span>
+            </label>
+            
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="contact.html">Hubungi saya</a>
+                <button id="dark-mode-toggle" class="dark-mode-btn">Mode Gelap</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="contact-content">
+            <h1>Hubungi Saya</h1>
+            
+            <div class="form-container">
+                <form id="contact-form" action="contact.html" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required class="form-input" placeholder="Masukkan nama Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input" placeholder="contoh@domain.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Ketik Pesan</label>
+                        <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-btn">
+                        Kirim Pesan
+                    </button>
+
+                    <div id="feedback" class="feedback-message" style="display: none;"></div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const contactForm = document.getElementById('contact-form');
+            const feedbackElement = document.getElementById('feedback');
+
+            contactForm.setAttribute('novalidate', '');
+
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                darkModeToggle.textContent = 'Mode Terang';
+            }
+
+            darkModeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                    darkModeToggle.textContent = 'Mode Terang';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    darkModeToggle.textContent = 'Mode Gelap';
+                }
+            });
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                feedbackElement.style.display = 'none';
+                feedbackElement.className = 'feedback-message';
+                
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                let hasError = false;
+                
+                if (!name) {
+                    showFieldError('name', 'Nama harus diisi');
+                    hasError = true;
+                } else {
+                    clearFieldError('name');
+                }
+                
+                if (!email) {
+                    showFieldError('email', 'Email harus diisi');
+                    hasError = true;
+                } else if (!isValidEmail(email)) {
+                    showFieldError('email', 'Format email tidak valid');
+                    hasError = true;
+                } else {
+                    clearFieldError('email');
+                }
+                
+                if (!message) {
+                    showFieldError('message', 'Pesan harus diisi');
+                    hasError = true;
+                } else {
+                    clearFieldError('message');
+                }
+                
+                if (!hasError) {
+                    feedbackElement.textContent = 'Pesan berhasil dikirim';
+                    feedbackElement.style.display = 'block';
+                    feedbackElement.style.backgroundColor = 'rgba(74, 222, 128, 0.2)';
+                    feedbackElement.style.color = 'var(--accent-main)';
+                    feedbackElement.style.borderColor = 'var(--accent-main)';
+                    
+                    contactForm.reset();
+                }
+            });
+            
+            function showFieldError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const formGroup = field.parentElement;
+                
+                const existingError = formGroup.querySelector('.error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                field.style.borderColor = '#ff6b6b';
+                
+                const errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                errorElement.textContent = message;
+                errorElement.style.color = '#ff6b6b';
+                errorElement.style.fontSize = '0.75rem';
+                errorElement.style.marginTop = '0.25rem';
+                
+                formGroup.appendChild(errorElement);
+            }
+            
+            function clearFieldError(fieldId) {
+                const field = document.getElementById(fieldId);
+                const formGroup = field.parentElement;
+                
+                field.style.borderColor = 'rgba(0, 208, 225, 0.5)';
+                
+                const existingError = formGroup.querySelector('.error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
