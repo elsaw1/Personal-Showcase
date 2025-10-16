@@ -59,5 +59,90 @@ Website ini ditujukan untuk:
 
 ---
 
+## 🧩 1. Struktur HTML 
+
+Struktur halaman web disusun secara **semantik** dan **terorganisir**, agar mudah dipahami baik oleh manusia maupun mesin pencari (SEO-friendly).  
+Berikut elemen utama yang digunakan:
+
+- `<header>` → berisi logo dan navigasi utama situs.  
+- `<nav>` → menampung menu menuju setiap profil anggota.  
+- `<main>` → area utama yang menampilkan konten profil.  
+- `<section>` → menampilkan informasi tiap anggota (foto, deskripsi, dan tautan).  
+- `<footer>` → berisi hak cipta serta tautan tambahan.  
+
+Struktur ini memastikan halaman mudah di-*maintain* dan mengikuti standar HTML5.
+
+---
+
+## 🎨 2. Desain CSS 
+
+Semua gaya tampilan diimplementasikan langsung di dalam file index.html menggunakan elemen <style>.
+Pendekatan ini dipilih untuk menyederhanakan struktur proyek dan memastikan semua komponen tampil konsisten dalam satu berkas.
+
+Konsep desain yang diterapkan:
+- Layout responsif menggunakan Flexbox agar elemen menyesuaikan ukuran layar.
+- Palet warna lembut dan seragam untuk menjaga kesan profesional dan nyaman dilihat.
+- Efek hover pada tombol dan gambar untuk menambah interaktivitas visual.
+- Transisi halus agar setiap perubahan tampilan tidak terasa kaku.
+- Tipografi elegan dengan font sans-serif modern untuk keterbacaan optimal.
+
+> Seluruh aturan CSS diletakkan dalam satu blok <style> di bagian <head>, memudahkan proses modifikasi langsung saat pengembangan.
+
+---
+
+## 💡 3. Kreativitas dan Desain 
+
+Desain dibuat dengan pendekatan **minimalis modern**, menonjolkan informasi utama tanpa mengorbankan estetika.  
+Beberapa unsur kreatif yang diterapkan:
+
+- Penggunaan **ikon** (Font Awesome) untuk memperjelas fungsi tombol dan tautan.  
+- **Animasi masuk (fade-in)** pada saat halaman dimuat untuk kesan dinamis.  
+- Tata letak bersih dan proporsional dengan kontras warna yang seimbang.  
+- Tema warna senada dengan identitas kelompok.  
+
+> Desain ini tidak hanya fokus pada keindahan visual, tetapi juga pada *user experience* agar pengguna merasa mudah berinteraksi.
+
+---
+
+## 📘 4. Dokumentasi dan SRS 
+
+### 📄 **Software Requirement Specification (SRS)**
+
+**a. Pendahuluan**  
+Website ini dirancang sebagai media untuk memperkenalkan profil anggota kelompok dalam bentuk digital interaktif.  
+
+**b. Tujuan Sistem**  
+Menampilkan data pribadi, portofolio, dan tautan sosial media anggota secara menarik, terintegrasi, dan mudah diakses.  
+
+**c. Kebutuhan Fungsional**  
+- Pengguna dapat melihat daftar anggota.  
+- Pengguna dapat membuka halaman profil tiap anggota.  
+- Navigasi dapat berfungsi di berbagai perangkat.  
+
+**d. Kebutuhan Non-Fungsional**  
+- Responsif di semua ukuran layar.  
+- Waktu muat halaman cepat.  
+- Tampilan konsisten di seluruh browser modern.  
+
+**e. Desain Antarmuka**  
+- Tampilan utama berisi daftar profil anggota.  
+- Tiap kartu profil menampilkan nama, deskripsi, dan tautan media sosial.  
+- Warna dominan: putih dan biru muda dengan aksen lembut.  
+
+---
+
+## ⚙️ 5. Fungsionalitas JavaScript
+Fungsi interaktif juga ditempatkan langsung di dalam file index.html menggunakan elemen <script> di bagian bawah halaman.
+Pendekatan ini menjaga situs tetap ringan dan mudah diuji tanpa perlu pemanggilan file eksternal.
+Fitur JavaScript yang diterapkan:
+- Menu Hamburger untuk navigasi pada perangkat mobile.
+- Event Listener yang merespons klik pengguna dan menambah dinamika halaman.
+- Animasi sederhana seperti efek buka-tutup menu dan perubahan ikon.
+- Efek Fade-in on Scroll, dimana elemen muncul perlahan saat halaman dimuat atau saat pengguna menggulir halaman
+- Smooth Scrolling Navigation, dimana pengguna dapat berpindah antarbagian halaman dengan efek gulir lembut tanpa memuat ulang halaman.
+
+> Dengan menempatkan JavaScript langsung di index.html, seluruh logika interaktif terintegrasi penuh dalam satu file, sehingga memudahkan pengujian dan pengembangan cepat.
+
+
 ## 🚀 Cara Menjalankan
 Akses website di link berikut https://elsaw1.github.io/Personal-Showcase/
