@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Portofolio Kula</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Kontak -->
+  <section class="contact">
+    <h2>Hubungi Saya</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+      <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required />
+      <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+
+      <button type="submit">Kirim</button>
+    </form>
+
+    <p id="notif" class="notif"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
