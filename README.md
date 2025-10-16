@@ -5,6 +5,9 @@ Website Profil Kelompok “Personal Showcase”
 
 ---
 
+## Latar Belakang
+Di dunia digital saat ini, kemampuan menampilkan diri secara kreatif sangat penting. Website ini dibuat sebagai portofolio kelompok yang memadukan informasi pribadi, foto, media sosial, dan portofolio masing-masing anggota dalam satu halaman interaktif. Tujuannya adalah agar pengunjung dapat mengenal kami lebih dekat, sekaligus menunjukkan kreativitas dan kemampuan kami dalam merancang website.
+
 ## 🧩 Deskripsi Sistem
 
 Website ini menampilkan informasi pribadi setiap anggota kelompok dalam satu platform terpadu.  
@@ -57,7 +60,11 @@ Website ini ditujukan untuk:
 ---
 
 ## 🚀 Cara Menjalankan
+1. Clone atau download repository ini ke komputer kamu.
+2. Buka file `index.html` dengan browser favoritmu (Chrome, Firefox, Edge, dll).
+3. Website akan langsung tampil dengan semua style dan interaksi, karena CSS dan JavaScript sudah ada di dalam file.
 
+Website ini juga bisa diakses secara online via [GitHub Pages](https://elsaw1.github.io/personal-showcase1/).
 1. Clone repository ini  
    ```bash
    git clone https://github.com/username/repo-name.git
