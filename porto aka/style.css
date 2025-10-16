@@ -1,0 +1,378 @@
+/* bg */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #a8e6cf, #dcedc1);
+  color: #0a3d62;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 7px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: lowercase;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #0a3d62;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: #dcedc1;
+}
+
+/* Konten utama */
+main {
+  flex: 1;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.foto-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.foto-controls button {
+  padding: 8px 16px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 6px;
+  color: #121212
+  cursor;
+  transition: background-color 0.3s ease;
+}
+
+.foto-controls button:hover {
+  background-color: #dcedc1;
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 35px;
+  text-transform: lowercase;
+}
+
+.info p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.about-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8e6cf, #dcedc1);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  color: #0a3d62;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+/* Animasi */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* portofolio */
+.portfolio-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8e6cf, #dcedc1);
+  color: #0a3d62;
+}
+
+.portfolio-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-transform: lowercase;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.portfolio-img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-text {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* kontak */
+
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a8e6cf, #dcedc1);
+  color: #0a3d62;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-transform: lowercase;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #07406e;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.form-message.success {
+  color: #2e7d32;
+  background-color: #c8e6c9;
+  border: 1px solid #2e7d32;
+}
+
+.form-message.error {
+  color: #c62828;
+  background-color: #ffcdd2;
+  border: 1px solid #c62828;
+}
+
+
+
+/* Footer */
+footer {
+  border-top: 1px solid #0a3d62;
+  padding: 20px ;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #0a3d62;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #333;
+  text-decoration: underline;
+  min-height: 100vh;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+
+/* Mode gelap untuk seluruh halaman */
+body.dark-mode {
+  background: linear-gradient(to right, #0a3d62, #1e1e1e)!important;
+  color: #ffffff;
+}
+
+/* Link di nav dan footer */
+nav.dark-mode a,
+footer.dark-mode a {
+  color: #ffffff;
+}
+
+/* Tambahan untuk bagian konten */
+body.dark-mode .about-section,
+body.dark-mode .about-section .animate-slide-up {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Tombol toggle */
+#darkModeToggle {
+  margin-left: 20px;
+  padding: 6px 12px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle:hover {
+  background-color: #555;
+}
+
+/* Untuk seluruh bagian Tentang Saya */
+body.dark-mode .about-section,
+body.dark-mode .portfolio-section,
+body.dark-mode .contact-section {
+  background: linear-gradient(to right, #0a3d62, #1e1e1e)!important;
+  color: #ffffff;
+}
+
+
+/* Transisi biar smooth */
+main,
+.about-container,
+.about-text,
+.profile-container,
+.info {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode .about-text {
+  color: #ffffff;
+}
+

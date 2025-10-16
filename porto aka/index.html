@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANATOLY MORNINGSTAR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">about</a></li>
+      <li><a href="portofolio.html">portofolio</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <button id="darkModeToggle">Dark Mode</button>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="profile-container animate-slide-up">
+      <img src="AKA PP.jpg" alt="Foto AKA" class="profile-img animate-slide-up" id="fotoProfil" />
+      <div class="info animate-slide-up">
+        <h1>ANATOLY AQUILA KATIMIN</h1>
+        <p>24091397125</p>
+        <p>Manajemen Informatika</p>
+        <p>BOXING</p>
+      </div>
+      <div class="foto-controls">
+        <button id="hideProfil">Sembunyikan Foto Profil</button>
+        <button id="showProfil">Tampilkan Foto Profil</button>
+  </div>
+    </div>
+  </main>
+
+  <section class="about-section animate-slide-up">
+  <div class="about-container">
+    <img src="AKA MASTER PIECE.jpg" alt="Zaldi menang boxing" class="about-img" />
+    <div class="about-text">
+      <h2>Tentang Saya</h2>
+      <p>
+        Halo semuanya! Nama saya <strong>ANATOLY AQUILA KATIMIN</strong>, biasa dipanggil Aka, Anatoly, atau panggilan lain yang teman-teman berikan.
+        Foto yang saya gunakan di sini adalah foto MASTER PIECE saya yang tersimpan di perangkat saya sebagai “AKA’s icon”—jadi, ya, ini yang paling mewakili saya saat ini.
+      </p>
+      <p>
+        Saya berasal dari <strong>AMBON</strong>, kota sekaligus ibu kota provinsi di provinsi Maluku. Tapi saya tinggal di <strong>JUANDA</strong>,
+        daerah yang dekat dengan bandara internasional dan domestik.
+      </p>
+      <p>
+        Saya punya sedikit obsesi terhadap dunia beladiri. Boxing bukan sekadar hobi, tapi sebuah tekad untuk menciptakan pertarungan yang seru dan bisa dikenang—kalau bisa, oleh seluruh dunia.
+      </p>
+      <p>Itu saja perkenalan dari saya. Terima kasih sudah mampir dan membaca.</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="contact">
+      <a href="mailto:anatolymorningstar@gmail.com">anatolymorningstar@gmail.com</a>
+      <a href="https://www.instagram.com/anatoll.ly?igsh=b3ZpejYyczc4anc5" target="_blank">@anatoll.ly</a>
+    </div>
+  </footer>
+
+  <script>
+  const toggleButton = document.getElementById('darkModeToggle');
+  const body = document.body;
+  const nav = document.querySelector('nav');
+  const footer = document.querySelector('footer');
+
+  toggleButton.addEventListener('click', () => {
+    // Toggle class dark-mode ke elemen utama
+    body.classList.toggle('dark-mode');
+    nav.classList.toggle('dark-mode');
+    footer.classList.toggle('dark-mode');
+
+    // Ubah teks tombol sesuai mode
+    if (body.classList.contains('dark-mode')) {
+      toggleButton.textContent = 'Light Mode';
+    } else {
+      toggleButton.textContent = 'Dark Mode';
+    }
+  });
+  const fotoProfil = document.getElementById('fotoProfil');
+  const hideProfilBtn = document.getElementById('hideProfil');
+  const showProfilBtn = document.getElementById('showProfil');
+
+  hideProfilBtn.addEventListener('click', () => {
+  fotoProfil.style.display = 'none';
+  });
+
+showProfilBtn.addEventListener('click', () => {
+  fotoProfil.style.display = 'block';
+});
+</script>
+
+
+</body>
+</html>

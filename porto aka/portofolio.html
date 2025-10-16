@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANATOLY MORNINGSTAR</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== DARK MODE STYLE ====== */
+    body.dark-mode {
+      background-color: #111;
+      color: #eee;
+      transition: 0.3s ease-in-out;
+    }
+
+    nav.dark-mode ul li a {
+      color: #ddd;
+    }
+
+    .portfolio-item {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .portfolio-img {
+      width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .toggle-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 8px 15px;
+      font-family: 'Poppins', sans-serif;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    body.dark-mode button {
+      background-color: #ddd;
+      color: #111;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer a {
+      color: inherit;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">about</a></li>
+      <li><a href="portofolio.html">portofolio</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== TOMBOL MODE DAN FOTO ====== -->
+  <div class="toggle-buttons">
+    <button onclick="toggleDarkMode()">🌙 Dark / ☀️ Light</button>
+    <button onclick="toggleProfile()">👤 Tampilkan / Sembunyikan Foto Profil</button>
+  </div>
+
+  <!-- ====== FOTO PROFIL ====== -->
+  <div id="profile-section" style="text-align: center;">
+    <img id="profile-img" src="aka porto.jpg" alt="Foto Profil" class="portfolio-img">
+    <p><strong>ANATOLY MORNINGSTAR</strong></p>
+  </div>
+
+  <section class="portfolio-section animate-slide-up">
+    <h2 class="portfolio-title">portofolio</h2>
+
+    <div class="portfolio-item">
+      <a href="https://vt.tiktok.com/ZSUDFoXTP/" target="_blank">
+        <img src="aka porto.jpg" alt="Next Flight" class="portfolio-img" />
+      </a>
+      <div class="portfolio-text">
+        <p>
+          Saya mengunggah sebuah video kemenangan di Tiktok sebagai bentuk penyaluran kesenangan saya dalam kemenangan lomba PORPROV JATIM 2025.
+          Video ini saya beri judul <strong>“Next Flight?”</strong>, sebuah pesan yang lahir dari semangat akan bertanding lagi.
+          Melalui Video ini, saya ingin menyampaikan kepada siapa pun bahwa saya bisa memenangkan pertandingan ini.
+        </p>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="https://anatolymorningstar.github.io/FUG-website/" target="_blank">
+        <img src="Screenshot 2025-10-12 150340.png" alt="FUG-website" class="portfolio-img" />
+      </a>
+      <div class="portfolio-text">
+        <p>
+          Saya pernah membuat web sederhana alakadar bernama <strong>“FUG-WEBSITE”</strong> dan berhasil saya masukan ke github saya.
+          Meskipun pada akhirnya belum saya lanjutakan atau perbagus, pengalaman ini tetap menjadi salah satu momen yang paling berkesan dalam perjalanan mengoding saya.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact">
+      <a href="mailto:anatolymorningstar@gmail.com">anatolymorningstar@gmail.com</a>
+      <a href="https://www.instagram.com/anatoll.ly?igsh=b3ZpejYyczc4anc5" target="_blank">@anatoll.ly</a>
+    </div>
+  </footer>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      document.querySelector("nav").classList.toggle("dark-mode");
+    }
+
+    // Show / hide profile photo
+    function toggleProfile() {
+      const profile = document.getElementById("profile-section");
+      if (profile.style.display === "none") {
+        profile.style.display = "block";
+      } else {
+        profile.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
+
