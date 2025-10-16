@@ -1,7 +1,5 @@
 # 🌐 Website Profil Kelompok “Personal Showcase”
 
-✨ **Nama Sistem yang Dirancang:**  “Personal Showcase”
-
 ---
 
 ## 🧩 Deskripsi Sistem
